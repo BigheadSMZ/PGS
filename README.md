@@ -17,7 +17,7 @@ I tried to make it as straightforward to use as possible.
 - Timer duration before launching a game can also be configured at the registry entry above.
 
 # Caveats/Shortcomings
-Because Windows is funky when it comes to primary display and assigning IDs, there are some things to take notice of.
+Because Windows is funky when it comes to primary display and IDs, there are some things to take notice of.
 - This may not work on some games that use launchers. The shortcut should always be made to a main executable.
 - The "Primary" monitor ID is not the same as the one that shows in Windows or Nvidia control panel.
 - I implemented the ability to see the monitor IDs in v1.2.0 but I have not tested beyond my own four screens.
