@@ -11,14 +11,14 @@ I tried to make it as straightforward to use as possible.
 - Open the shortcut which launches PGS with the game executable as a parameter, and choose the two screens you want to swap between.
 - Press the [?] button to find the IDs to your monitors. They do not match up with what Windows reports.
 - Game will start automatically after 5 seconds. This can be cancelled by clicking anywhere on the GUI.
-- Press "OK". The program will swap the primary screen to the "Secondary Monitor ID" and show the game on that screen.
+- Press "OK". The program will swap the primary screen to the "Secondary Monitor ID" and show the game there.
 - It will hang out in the background until the game closes, and restore primary display to the "Primary Monitor ID".
 - The ID values are shared across all shortcuts and are stored in the registry: *HKCU\Software\Software\PGS\Values*.
 - Timer duration before launching a game can also be configured at the registry entry above.
 
 # Caveats/Shortcomings
 Because Windows is funky when it comes to primary display and assigning IDs, there are some things to take notice of.
-- This may not work on some games that use launchers. The shortcut should always be made to the game's main executable.
+- This may not work on some games that use launchers. The shortcut should always be made to a main executable.
 - The "Primary" monitor ID is not the same as the one that shows in Windows or Nvidia control panel.
 - I implemented the ability to see the monitor IDs in v1.2.0 but I have not tested beyond my own four screens.
 
