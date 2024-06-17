@@ -17,7 +17,7 @@ I tried to make it as straightforward to use as possible.
 - Timer duration before launching a game can also be configured at the registry entry above.
 
 # Command Line
-PGS is inherently a command line program, but only takes one arguments which is the path to a game executable. Any more than that and it will fail to do anything. To launch from command line:
+PGS is inherently a command line program, but only takes one argument which is the path to a game executable. Any more than that and it will fail to do anything. Shortcuts created by PGS just include an argument to the game path and uses it's shortcut icon. To launch a game through PGS from the command line:
 
 `PGS.exe "C:\Full\path\to\game.exe"`
 
