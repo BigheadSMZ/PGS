@@ -8,7 +8,7 @@ This is a simple application written in C# .NET Framework v4.8 that swaps the pr
 I tried to make it as straightforward to use as possible.
 - Launch the application **PGS.exe** and use the button to create a shortcut to a game executable.
 - After creating a shortcut to a game, close out the program. 
-- Open the shortcut which launches PGS with the game executable as a parameter, and choose the two screens you want to swap between.
+- Open the shortcut which launches PGS with the game executable as a parameter, and choose the two screens you want to swap between. Primary is your main monitor, secondary is the screen to switch to.
 - Press the [?] button to find the IDs to your monitors. They do not match up with what Windows reports.
 - Game will start automatically after 5 seconds. This can be cancelled by clicking anywhere on the GUI.
 - Press "OK". The program will swap the primary screen to the "Secondary Monitor ID" and show the game there.
