@@ -2,13 +2,14 @@
 Multi-monitor application which swaps the primary display when playing games. This is to work-around games that don't let you pick which display to launch on.
 
 # Purpose
-This is a simple application written in C# that leverages **NirCmd.exe** to swap the primary display when launching a game.
+This is a simple application written in C# .NET Framework v4.8 that leverages **NirCmd.exe** to swap the primary display when launching a game.
 
 # How to Use
 I tried to make it as straightforward to use as possible.
 - Launch the application **PGS.exe** and use the button to create a shortcut to a game executable.
 - After creating a shortcut to a game, close out the program. 
 - Open the shortcut which launches PGS with the game executable as a parameter, and choose the two screens you want to swap between.
+- Game will start automatically after 5 seconds. This can be cancelled by clicking anywhere on the GUI.
 - Press "OK". The program will run NirCMD to swap primary to the "Secondary Monitor ID" and show the game on that screen.
 - It will hang out in the background until the game closes, and restore primary display to the "Primary Monitor ID".
 - The ID values are shared across all shortcuts and are stored in the registry: *HKCU\Software\Software\PGS*.
