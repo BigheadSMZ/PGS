@@ -1,5 +1,6 @@
 # PGS (Primary Gaming Screen)
 Multi-monitor application which swaps the primary display when playing games. This is to work-around games that don't let you pick which display to launch on.
+
 ![PGS](https://github.com/BigheadSMZ/PGS/assets/9309452/2be56d5c-2bef-40fd-b127-32ec1c5c41e2)
 
 # Purpose
