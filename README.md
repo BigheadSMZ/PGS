@@ -13,7 +13,7 @@ I tried to make it as straightforward to use as possible.
 - Game will start automatically after 5 seconds. This can be cancelled by clicking anywhere on the GUI.
 - Press "OK". The program will swap the primary screen to the "Secondary Monitor ID" and show the game there.
 - It will hang out in the background until the game closes, and restore primary display to the "Primary Monitor ID".
-- The ID values are shared across all shortcuts and are stored in the registry: *HKCU\Software\Software\PGS\Values*.
+- The ID values are shared across all shortcuts and are stored in the registry: *HKCU\Software\PGS\Values*.
 - Timer duration before launching a game can also be configured at the registry entry above.
 
 # Command Line
