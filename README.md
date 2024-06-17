@@ -16,6 +16,10 @@ I tried to make it as straightforward to use as possible.
 - The ID values are shared across all shortcuts and are stored in the registry: *HKCU\Software\Software\PGS\Values*.
 - Timer duration before launching a game can also be configured at the registry entry above.
 
+# Command Line
+PGS is inherently a command line program, but only takes one arguments which is the path to a game executable. Any more than that and it will fail to do anything. To launch from command line:
+`PGS.exe "C:\Full\path\to\game.exe"`
+
 # Caveats/Shortcomings
 Because Windows is funky when it comes to primary display and IDs, there are some things to take notice of.
 - This may not work on some games that use launchers. The shortcut should always be made to a main executable.
