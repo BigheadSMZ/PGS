@@ -1,7 +1,7 @@
 # PGS (Primary Gaming Screen)
 Multi-monitor application which swaps the primary display when playing games. This is to work-around games that don't let you pick which display to launch on.
 
-![image](https://github.com/BigheadSMZ/PGS/assets/9309452/415fcd23-03e5-4e5c-b61a-33485411fe05)
+![image](https://github.com/BigheadSMZ/PGS/assets/9309452/80bb4019-1d5d-447e-bfea-51a8577e8102)
 
 # Purpose
 This is a simple application written in C# .NET Framework v4.8 that swaps the primary display when launching a game and swaps it back when it closes. While some games allow you to change the screen it is displayed on using Window Key + Shift + Arrow (Left/Right), not all games will work with this method so this acts as a workaround.
