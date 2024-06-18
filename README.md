@@ -40,9 +40,9 @@ And while it should be obvious, -notimer and -nogui can not be used together nor
 
 # Caveats/Shortcomings
 Because Windows is funky when it comes to primary display and IDs, there are some things to take notice of.
-- This may not work on some games that use launchers and the shortcut should always be made to a main executable.
+- This may not work on some games that use launchers. Shortcuts should always be made to a main executable.
 - The "Primary" monitor ID is not the same as the one that shows in Windows or Nvidia control panel.
-- Windows likes to seemingly change the IDs at random. Maybe after restarts, driver updates, who knows what else?
+- Windows likes to change IDs seemingly at random. Maybe after restart, driver update, who knows what else?
 - Hiding the GUI removes the ability to reconfigure the monitor IDs if they happen to change.
 - If you want all your shortcuts to hide the GUI, at least keep one that always shows the GUI to change IDs later. 
 
