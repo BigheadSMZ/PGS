@@ -36,7 +36,7 @@ Of course the exception is when using one of the above special arguments. In thi
 
 `PGS.exe "C:\Games\Portal\hl2.exe" -nogui -game portal -steam`
 
-And while it should be obvious, -notimer and -nogui can not be used together nor would it make any sense. There is no timer if there is no GUI. Using both will send whatever comes second to the game which could have unpredictable results.
+While it should be obvious, -notimer and -nogui can't be used together nor would it make sense. There is no timer if there is no GUI. Using both will send whatever comes second to the game which could have unpredictable results.
 
 # Caveats/Shortcomings
 Because Windows is funky when it comes to primary display and IDs, there are some things to take notice of.
