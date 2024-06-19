@@ -9,7 +9,7 @@ This is a simple application written in C# .NET Framework v4.8 that swaps the pr
 # How to Use
 I tried to make it as straightforward to use as possible.
 - Launch the application **PGS.exe** and use the button to create a shortcut to a game executable.
-- If the game requires CLI arguments, press the down arrow to reveal a textbox to enter them.
+- If the game requires arguments, press the down arrow button to reveal a textbox to enter them.
 - After creating a shortcut, close it out completely. Launching it directly is just to create shortcuts.
 - Open the newly created shortcut which launches PGS with the game executable as a parameter, and choose the screens you want to swap between. Primary is your main monitor, secondary is the screen to switch to.
 - Press the [monitor] button to find the IDs to your monitors. They don't match up with what Windows reports.
