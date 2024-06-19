@@ -47,4 +47,10 @@ Because Windows is funky when it comes to primary display and IDs, there are som
 - If you want all your shortcuts to hide the GUI, at least keep one that always shows the GUI to change IDs later. 
 
 # Why I Created It
-I have 3x LG 1440p monitors connected through Display Port, and a 2160p LG television which I like to do some couch gaming on. I prefer to keep my center monitor as the primary display, and it's annoying to have to swap it manually to the TV when playing certain games. This program lets me work around having to perform that task manually every single time, although it is annoying that the internal IDs can seem to change at random. It doesn't seem to happen constantly, but it does happen and there's nothing we can really do about it. Heck, the ID's we get programatically don't even line up with the ones Windows reports in the display manager. 
+I have 3x LG 1440p monitors connected through Display Port, and a 2160p LG television which I like to do some couch gaming on. I prefer to keep my center monitor as the primary display, and it's annoying to have to swap it manually to the TV when playing certain games. This program lets me work around having to perform that task manually every single time, although it is annoying that the internal IDs can seem to change at random. It doesn't seem to happen constantly, but it does happen and there's nothing we can really do about it. Heck, the ID's we get programatically don't even line up with the ones Windows reports in the display manager.
+
+# Credits
+If it wasn't for the site [stackoverflow](https://stackoverflow.com) and the amazing people who frequent it, this and pretty much any of my projects wouldn't be possible.
+- **[Modern FolderSelectDialog](https://stackoverflow.com/questions/66823581/use-the-upgraded-folderbrowserdialog-vista-style-in-powershell):** Ben Philipp at stackoverflow
+- **[Set Primary Monitor Code](https://stackoverflow.com/questions/195267/use-windows-api-from-c-sharp-to-set-primary-monitor):** ADBailey at stackoverflow
+- **[Screen Friendly Name](https://stackoverflow.com/questions/4958683/how-do-i-get-the-actual-monitor-name-as-seen-in-the-resolution-dialog):** G.Y at stackoverflow
