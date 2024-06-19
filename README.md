@@ -24,6 +24,8 @@ PGS is inherently a command line program. The ability to create shortcuts is jus
 - **-notimer** : This completely disables the timer meaning the game will never automatically launch. Keep in mind the timer can be cancelled by clicking anywhere, and more time can be added via the registry key.
 - **-nogui** : This completely disables the GUI and launches the game immediately. Even the background window is disabled, PGS is completely transparent. Keep in mind with no GUI, monitor IDs can not be configured.
 
+![image](https://github.com/BigheadSMZ/PGS/assets/9309452/1f703bff-6ed9-4ca7-9bb2-fc48adf5be2c)
+
 To manually launch games via command line, batch scripts, custom shortcuts, game launchers, whatever, its as simple as just launching PGS.exe and entering the game executable path as an argument. The simplest example is as follows:
 
 `PGS.exe "C:\Path\to\game\executable.exe"`
