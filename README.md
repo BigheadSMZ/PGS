@@ -1,6 +1,3 @@
-# NOTICE: INFO IS OUTDATED
-PGS v1.4.0 changes some things substantially. I do not have the time to update the README at the moment so read the release notes for the new version.
-
 # PGS (Primary Gaming Screen)
 Multi-monitor application which swaps the primary display when playing games. This is to work-around games that don't let you pick which display to launch on.
 
