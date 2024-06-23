@@ -11,37 +11,29 @@ This is a simple application written in C# .NET Framework v4.8 that swaps the pr
 
 # How to Use
 I tried to make it as straightforward to use as possible.
-- Launch the application **PGS.exe** and use the button to create a shortcut to a game executable.
-- If the game requires arguments, press the down arrow button to reveal a textbox to enter them.
-- After creating a shortcut, close it out completely. Launching it directly is just to create shortcuts.
+- Launch the application **PGS.exe** and you will be greeted with a menu to create a shortcut.
+- If the game requires arguments, press the [down arrow] button to reveal a textbox to enter them.
+- Create a game shortcut, close out PGS. Launching it directly is just to create shortcuts.
 - Open the newly created shortcut which launches PGS with the game executable as a parameter, and choose the screens you want to swap between. Primary is your main monitor, secondary is the screen to switch to.
 - Press the [monitor] button to find the IDs to your monitors. They don't match up with what Windows reports.
 - Games will start automatically after 5 seconds. This can be cancelled by clicking anywhere on the GUI.
 - Press "OK". The program will swap the primary screen to the **Secondary Monitor ID** and show the game there.
 - It will chill in the background until the game closes and restore primary display to the **Primary Monitor ID**.
-- The ID values are shared across all shortcuts and are stored in the registry: *HKCU\Software\PGS\Values*.
-- Timer duration before launching a game can also be configured at the registry entry above.
+
+# Options Menu
+Starting with PGS v1.4.0 there is now an options menu to configure certain behaviors and settings. Settings of option values are stored in an INI file named **PGS.ini**.
+- To access the options menu, launch **PGS.exe** directly and not a game shortcut.
+- Press the [gear] button next to the [down arrow] button to open the options menu.
+
+There are several options that can only be configured here. They are applied globally across all shortcuts or whenever launching a game with PGS via command line. 
+- **Primary/Secondary Monitor ID:** This is the same as when launching a game.
+- **Timer Countdown:** The amount of time before a game will start automatically.
+- **Disable Countdown Timer:** Disables the timer completely. Game will not auto-launch.
+- **Immediately Launch Game:** PGS menu is hidden when launching games.
+- **Save/Restore Desktop Icons:** This feature works around Desktop icons getting scattered. It saves all Desktop icon positions before switching primary display, and restores them after the primary display is swapped back.
 
 # Command Line
-PGS is inherently a command line program. The ability to create shortcuts is just the easiest means of launching games with it. The first command sent to PGS should always be the full path to the game executable. To be safe, always surround it with quotes if you are doing things manually. If the path has spaces in it, it will divide up the path into multiple arguments and fail. Any arguments supplied after the first argument are passed through to the game executable. There are two ***Special Arguments*** that PGS recognizes if sent as the second command following the game path. When using the GUI to create shortcuts, this will be the first argument.
-- **-notimer** : This completely disables the timer meaning the game will never automatically launch. Keep in mind the timer can be cancelled by clicking anywhere, and more time can be added via the registry key.
-- **-nogui** : This completely disables the GUI and launches the game immediately. Even the background window is disabled, PGS is completely transparent. Keep in mind with no GUI, monitor IDs can not be configured.
-
-![image](https://github.com/BigheadSMZ/PGS/assets/9309452/1f703bff-6ed9-4ca7-9bb2-fc48adf5be2c)
-
-To manually launch games via command line, batch scripts, custom shortcuts, game launchers, whatever, its as simple as just launching PGS.exe and entering the game executable path as an argument. The simplest example is as follows:
-
-`PGS.exe "C:\Path\to\game\executable.exe"`
-
-Some games may require their own command line arguments. Any arguments after the game path are sent directly to the game. For example, the game Portal uses the Half Life 2 executable:
-
-`PGS.exe "C:\Games\Portal\hl2.exe" -game portal -steam`
-
-Of course the exception is when using one of the above special arguments. In this case, any arguments after the special command are sent to the game. Suppose you wanted to launch Portal without the PGS GUI showing up:
-
-`PGS.exe "C:\Games\Portal\hl2.exe" -nogui -game portal -steam`
-
-While it should be obvious, -notimer and -nogui can't be used together nor would it make sense. There is no timer if there is no GUI. Using both will send whatever comes second to the game which could have unpredictable results.
+PGS is inherently a command line program. The ability to create shortcuts is just the easiest means of launching games with it. The first command sent to PGS should always be the full path to the game executable. To be safe, always surround it with quotes if you are doing things manually. If the path has spaces in it, it will divide up the path into multiple arguments and fail. Any arguments supplied after the first argument are passed through and sent directly to the game executable.
 
 # Caveats/Shortcomings
 Because Windows is funky when it comes to primary display and IDs, there are some things to take notice of.
