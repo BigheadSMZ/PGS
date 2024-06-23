@@ -50,3 +50,4 @@ If it wasn't for the site [stackoverflow](https://stackoverflow.com) and the ama
 - **[Modern FolderSelectDialog](https://stackoverflow.com/questions/66823581/use-the-upgraded-folderbrowserdialog-vista-style-in-powershell):** Ben Philipp at stackoverflow
 - **[Set Primary Monitor Code](https://stackoverflow.com/questions/195267/use-windows-api-from-c-sharp-to-set-primary-monitor):** ADBailey at stackoverflow
 - **[Screen Friendly Name](https://stackoverflow.com/questions/4958683/how-do-i-get-the-actual-monitor-name-as-seen-in-the-resolution-dialog):** G.Y at stackoverflow
+- **[Desktop Icon Positions](https://www.codeproject.com/Articles/639486/Save-and-Restore-Icon-Positions-on-Desktop):** Ivan Yakimov at codeproject
