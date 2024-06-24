@@ -1,5 +1,5 @@
 # PGS (Primary Gaming Screen)
-Multi-monitor application which swaps the primary display when playing games. This is to work-around games that don't let you pick which display to launch on.
+Multi-monitor application which swaps the primary display when playing games. This is to provide an automated way to swap the display that games appear on and/or work-around games that don't let you pick or move to a different display.
 
 ![340759348-80bb4019-1d5d-447e-bfea-51a8577e8102](https://github.com/BigheadSMZ/PGS/assets/9309452/1db2b952-1287-487e-b933-79cc68a478f2)
 
@@ -39,11 +39,11 @@ Because Windows is funky when it comes to primary display and IDs, there are som
 - This may not work on some games that use launchers. Shortcuts should always be made to a main executable.
 - The "Primary" monitor ID is not the same as the one that shows in Windows or Nvidia control panel.
 - Windows likes to change IDs seemingly at random. Maybe after restart, driver update, who knows what else?
-- Hiding the GUI removes the ability to reconfigure the monitor IDs if they happen to change.
-- If you want all your shortcuts to hide the GUI, at least keep one that always shows the GUI to change IDs later. 
+- Hiding the GUI removes the ability to reconfigure the monitor IDs from shortcuts if they happen to change.
+- If you need to change monitor IDs down the road after hiding the GUI, just launch PGS.exe directly. 
 
 # Why I Created It
-I have 3x LG 1440p monitors connected through Display Port, and a 2160p LG television which I like to do some couch gaming on. I prefer to keep my center monitor as the primary display, and it's annoying to have to swap it manually to the TV when playing certain games. This program lets me work around having to perform that task manually every single time, although it is annoying that the internal IDs can seem to change at random. It doesn't seem to happen constantly, but it does happen and there's nothing we can really do about it. Heck, the ID's we get programatically don't even line up with the ones Windows reports in the display manager.
+I have 3x LG 1440p monitors connected through Display Port, and a LG 2160p television which I like to do some couch gaming on. I prefer to keep my center monitor as the primary display, and it's annoying to have to swap it manually to the TV when playing certain games. This program lets me work around having to perform that task manually every single time, although it is annoying that the internal IDs can seem to change at random. It doesn't seem to happen constantly, but it does happen and there's nothing we can really do about it. Heck, the ID's we get programatically don't even line up with the ones Windows reports in the display manager.
 
 # Credits
 If it wasn't for the site [stackoverflow](https://stackoverflow.com) and the amazing people who frequent it, this and pretty much any of my projects wouldn't be possible.
