@@ -144,11 +144,11 @@ namespace PGS
             // Wait until the game closes before restoring the display.
             GameProcess.WaitForExit();
 
-            // Set the primary display to the primary monitor.
-            Monitors.SetAsPrimaryMonitor(uMonitor01_ID);
-
             // Restore the desktop icon locations.
             if (Config.SaveIconPos) { DesktopIcons.RestoreIconPositions(); }
+
+            // Set the primary display to the primary monitor.
+            Monitors.SetAsPrimaryMonitor(uMonitor01_ID);
         }
     }
 }
