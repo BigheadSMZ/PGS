@@ -65,7 +65,7 @@ namespace PGS
                         else { Value = Math.Round(Convert.ToInt32(Value) * Multiplier, MidpointRounding.AwayFromZero); }
                         return (Convert.ToInt32(Value) + Add + AddX + AddY);
                     }
-                case "System.In64":
+                case "System.Int64":
                     {
                         if (!Round) { Value = Math.Truncate(Convert.ToInt32(Value) * Multiplier); }
                         else { Value = Math.Round(Convert.ToInt32(Value) * Multiplier, MidpointRounding.AwayFromZero); }
