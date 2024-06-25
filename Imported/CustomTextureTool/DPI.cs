@@ -8,7 +8,7 @@ namespace PGS
 {
     public static class DPI
     {
-        // Get the current DPI stored in the registry.
+        // Create the values for DPI scaling.
         private static int Value;
         private static decimal Multiplier;
         private static int OffsetFix;
@@ -73,9 +73,9 @@ namespace PGS
                     }
                 case "System.Single":
                     {
-                        if (!Round) { Value = Math.Truncate(Convert.ToInt32(Value) * Multiplier); }
-                        else { Value = Math.Round(Convert.ToInt32(Value) * Multiplier, MidpointRounding.AwayFromZero); }
-                        return (Convert.ToInt32(Value) + Add + AddX + AddY);
+                        if (!Round) { Value = Math.Truncate(Convert.ToSingle(Value) * Multiplier); }
+                        else { Value = Math.Round(Convert.ToSingle(Value) * Multiplier, MidpointRounding.AwayFromZero); }
+                        return (Convert.ToSingle(Value) + Add + AddX + AddY);
                     }
                 case "System.Double":
                     {
