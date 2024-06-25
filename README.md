@@ -34,6 +34,14 @@ There are several options that can only be configured here. They are applied glo
 # Command Line
 PGS is inherently a command line program. The ability to create shortcuts is just the easiest means of launching games with it. The first command sent to PGS should always be the full path to the game executable. To be safe, always surround it with quotes if you are doing things manually. If the path has spaces in it, it will divide up the path into multiple arguments and fail. Any arguments supplied after the first argument are passed through and sent directly to the game executable.
 
+To manually launch games via command line, batch scripts, custom shortcuts, game launchers, whatever, its as simple as just launching PGS.exe and entering the game executable path as an argument. The simplest example is as follows:
+
+`PGS.exe "C:\Path\to\game\executable.exe"`
+
+Some games may require their own command line arguments. Any arguments after the game path are sent directly to the game. For example, the game Portal uses the Half Life 2 executable:
+
+`PGS.exe "C:\Games\Portal\hl2.exe" -game portal -steam`
+
 # Caveats/Shortcomings
 Because Windows is funky when it comes to primary display and IDs, there are some things to take notice of.
 - This may not work on some games that use launchers. Shortcuts should always be made to a main executable.
