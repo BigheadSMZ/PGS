@@ -30,11 +30,11 @@ namespace PGS
         }
         private void NoTimerCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            Config.NoGUI = this.NoTimerCheckbox.Checked;
+            Config.NoTimer = this.NoTimerCheckbox.Checked;
         }
         private void NoGUICheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            Config.NoTimer = this.NoGUICheckBox.Checked;
+            Config.NoGUI = this.NoGUICheckBox.Checked;
         }
         private void DesktopIconsCheckbox_CheckedChanged(object sender, EventArgs e)
         {
