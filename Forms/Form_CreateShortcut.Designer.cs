@@ -155,7 +155,7 @@
             this.MinimumSize = new System.Drawing.Size(214, 269);
             this.Name = "Form_ShortMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PGS v1.4.0";
+            this.Text = "PGS v1.4.1";
             this.ShortcutGroupBox.ResumeLayout(false);
             this.ArgumentsGroupBox.ResumeLayout(false);
             this.ArgumentsGroupBox.PerformLayout();

@@ -80,7 +80,7 @@
             this.MinimumSize = new System.Drawing.Size(214, 214);
             this.Name = "Form_ErrorMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PGS v1.4.0";
+            this.Text = "PGS v1.4.1";
             this.ErrorGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
