@@ -13,6 +13,9 @@ namespace PGS
         [STAThread]
         static void Main(string[] Arguments)
         {
+            // Set the version of the program.
+            Config.PGSVersion = "1.4.2";
+
             // Enable form visual styles.
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

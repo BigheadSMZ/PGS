@@ -6,6 +6,9 @@ namespace PGS
 {
     internal class Config
     {
+        // Rather than keep trying to find all places the version is set, let's create a single instance.
+        public static string PGSVersion = "";
+
         // Values used across the application.
         public static string AppPath = "";
         public static string BaseFolder = "";

@@ -15,6 +15,9 @@ namespace PGS
             Forms.ConfigDialog = new Form_ConfigMenu();
             Forms.InfoDialog   = new Form_ScreenInfo();
 
+            // Set the version number on dialog title bars.
+            Forms.ShortDialog.Text = "PGS v" + Config.PGSVersion;
+
             // Scale the shortcut dialog.
             Forms.ScaleConfigDialog();
             Forms.ScaleShortcutDialog();
@@ -46,6 +49,9 @@ namespace PGS
             // If it doesn't exist, show the error dialog.
             Forms.ErrorDialog = new Form_ErrorMenu();
 
+            // Set the version number on dialog title bars.
+            Forms.ErrorDialog.Text = "PGS v" + Config.PGSVersion;
+
             // Scale it for DPI.
             Forms.ScaleErrorDialog();
 
@@ -65,6 +71,10 @@ namespace PGS
 
             // Set the icon to the form.
             Forms.MainDialog.Icon = FormIcon;
+
+            // Set the version number on dialog title bars.
+            Forms.MainDialog.Text = "PGS v" + Config.PGSVersion;
+            Forms.WaitDialog.Text = "PGS v" + Config.PGSVersion;
 
             // Scale the dialogs with DPI.
             Forms.ScaleMainDialog();

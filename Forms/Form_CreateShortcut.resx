@@ -130,18 +130,7 @@ that will be sent to the game executable.
 PGS will always set the first argument as
 the path to the game within the shortcut,
 and any additional arguments entered in
-the textbox below are sent to the game.
-
-There are two special arguments that PGS
-will read but not send to the game if they
-are entered into the first position below:
-
--notimer : disables the timer completely
--nogui: game launches immediately
-
-Keep in mind if disabling the GUI that it
-will be impossible to configure the screen
-identifiers while the argument is in use.</value>
+the textbox below are sent to the game.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ConfigButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

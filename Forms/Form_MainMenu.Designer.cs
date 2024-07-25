@@ -213,7 +213,7 @@ namespace PGS
             this.MinimumSize = new System.Drawing.Size(214, 214);
             this.Name = "Form_MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PGS v1.4.1";
+            this.Text = "PGS";
             this.MainGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Monitor02NumBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Monitor01NumBox)).EndInit();

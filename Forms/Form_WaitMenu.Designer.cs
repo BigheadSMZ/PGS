@@ -55,7 +55,7 @@
             this.MinimumSize = new System.Drawing.Size(214, 214);
             this.Name = "Form_WaitMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PGS v1.4.1";
+            this.Text = "PGS";
             this.ResumeLayout(false);
 
         }
