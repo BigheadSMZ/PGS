@@ -115,66 +115,90 @@ namespace PGS
             // The total compilation of info.
             string DisplayInfo = "";
 
-            // This method can be called from config dialog or main dialog so update appropriate numeric up/down maximums.
+            // Adjust the maximum value for the numeric up/downs based on the source of the call.
             if (FromConfigDialog)
             {
-                // While we're here, adjust the maximum value for the numeric up/downs.
                 Forms.ConfigDialog.Monitor01NumBox.Maximum = Monitors.Length;
                 Forms.ConfigDialog.Monitor02NumBox.Maximum = Monitors.Length;
             }
             else
             {
-                // While we're here, adjust the maximum value for the numeric up/downs.
                 Forms.MainDialog.Monitor01NumBox.Maximum = Monitors.Length;
                 Forms.MainDialog.Monitor02NumBox.Maximum = Monitors.Length;
             }
-            // It turns out "DeviceFriendlyName" always returns the list "in order" starting with index [0] so store them as they are recieved.
-            foreach (Screen Monitor in Monitors)
-            {
-                // I have no idea why it works this way, but it returns the list from lowest index [0] to highest index [number of screens - 1].
-                ScrName[IntID] = Monitor.DeviceFriendlyName() + "{0}";
 
-                // Since it's in order, we can just reference the loop ID.
-                IntID++;
+            // Store monitor names as they are received.
+            for (int i = 0; i < Monitors.Length; i++)
+            {
+                ScrName[i] = Monitors[i].DeviceFriendlyName() + "{0}";
             }
-            // Looping through screens processes them "out of order" (ex: 3,1,4,2) so force reordering them in an array based on their index.
+
+            // Looping through monitors, extracting and storing their info based on their device name.
             foreach (Screen Monitor in Monitors)
             {
-                // Get the display name (DISPLAY1, DISPLAY2, etc) which starts with index [1] and extract the ID number.
+                // Extract the last character of the device name to use as the screen's ID.
                 StringID = Monitor.DeviceName;
-                StringID = StringID.Substring(StringID.Length - 1, 1);
+                if (StringID.Length > 0)
+                {
+                    // Get the last character of the device name (assuming it ends with a number).
+                    StringID = StringID.Substring(StringID.Length - 1, 1);
 
-                // Subtract one to match the zero based indexes. 
-                IntID = Int32.Parse(StringID) - 1;
+                    // Try to parse the StringID as an integer.
+                    if (int.TryParse(StringID, out int parsedID))
+                    {
+                        // Subtract 1 to convert to a zero-based index.
+                        IntID = parsedID - 1;
 
-                // Get the width and height of the screen.
-                ScrWidth[IntID] = Monitor.Bounds.Width.ToString();
-                ScrHeight[IntID] = Monitor.Bounds.Height.ToString();
+                        // Validate that IntID is within bounds.
+                        if (IntID >= 0 && IntID < ArraySize)
+                        {
+                            // Get screen width and height.
+                            ScrWidth[IntID] = Monitor.Bounds.Width.ToString();
+                            ScrHeight[IntID] = Monitor.Bounds.Height.ToString();
 
-                // Assemble the resolution.
-                ScrDims[IntID] = "Resolution: " + ScrWidth[IntID] + "x" + ScrHeight[IntID] + "{0}";
-
-                // Get the primary status of the screen.
-                ScrPrime[IntID] = "Primary: " + Monitor.Primary.ToString() + "{0}";
+                            // Assemble resolution and primary status.
+                            ScrDims[IntID] = "Resolution: " + ScrWidth[IntID] + "x" + ScrHeight[IntID] + "{0}";
+                            ScrPrime[IntID] = "Primary: " + Monitor.Primary.ToString() + "{0}";
+                        }
+                        else
+                        {
+                            // Log or handle the error if IntID is out of range.
+                            Console.WriteLine($"IntID {IntID} is out of bounds for monitor {Monitor.DeviceName}");
+                        }
+                    }
+                    else
+                    {
+                        // Log or handle the error if parsing fails.
+                        Console.WriteLine($"Failed to parse screen ID from device name: {Monitor.DeviceName}");
+                    }
+                }
+                else
+                {
+                    // Log or handle the error if the device name is empty or invalid.
+                    Console.WriteLine("Device name is empty or invalid.");
+                }
             }
-            // Now that we have all the information in order, compile it together in a string.
+
+            // Compile the information into a display string.
             for (int i = 0; i < ArraySize; i++)
             {
-                // Because all of the info is now in order, we can just use the current loop iteration as the ID.
+                // Use the current loop iteration as the ID (adjusting to one-based).
                 StringID = "Monitor ID: " + (i + 1).ToString() + "{0}";
 
-                // Add the information to the string.
+                // Add the information to the display string.
                 DisplayInfo += ScrName[i];
                 DisplayInfo += ScrDims[i];
                 DisplayInfo += ScrPrime[i];
                 DisplayInfo += StringID;
                 DisplayInfo += "{0}";
             }
+
             // Format the text to put each entry onto a new line.
             DisplayInfo = String.Format(DisplayInfo, Environment.NewLine);
 
-            // Add the text to the rich textbox.
+            // Add the text to the rich text box.
             Forms.InfoDialog.InfoRichTextBox.Text = DisplayInfo;
         }
+
     }
 }
