@@ -3,6 +3,9 @@ Multi-monitor application which swaps the primary display when playing games. Th
 
 ![340759348-80bb4019-1d5d-447e-bfea-51a8577e8102](https://github.com/BigheadSMZ/PGS/assets/9309452/1db2b952-1287-487e-b933-79cc68a478f2)
 
+# NOTICE
+It has come to my attention that a lot of people found this application via a short by ![UFD Tech](https://www.youtube.com/ufdtech) on YouTube. While I appreciate the exposure, the video somewhat misrepresented what this application is for. It was NOT developed with the intention of solving the issue of "games launching on the wrong screen". It is to solve the issue of "launching some games on a different screen". While these two issues are similar in nature, the distinction between them is very important. The majority of games will almost always launch on the "primary display", which is exactly what this application takes advantage of. Say you want to launch some games on your main monitor, and some games on your television. This is the type of situation this application was created for, not games "launching on the wrong screen". Chances are, if the game is launching on the wrong screen, as not launching on what you have set as your "primary display", this application will most likely have no effect. If you need an example of my personal use case, scroll down to the **Why I Created It** section.
+
 # Purpose
 This is a simple application written in C# .NET Framework v4.8 that swaps the primary display when launching a game and swaps it back when it closes. While some games allow you to change the screen it is displayed on using Window Key + Shift + Arrow (Left/Right), not all games will work with this method so this acts as a work-around.
 
